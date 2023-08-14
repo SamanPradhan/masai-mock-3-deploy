@@ -13,20 +13,20 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 app.use(express.json());
 
-var options = {
-  swaggerDefinition: {
-    openapi: "3.1.0",
-    info: {
-      title: "backend flightbook",
-      description: "API docs",
-    },
-    servers: [{ url: "localhost:5000" }],
-  },
-  apis: ["routes/*.js"],
-};
-let swaggerspe = swaggerJsdoc(options);
+// var options = {
+//   swaggerDefinition: {
+//     openapi: "3.1.0",
+//     info: {
+//       title: "backend flightbook",
+//       description: "API docs",
+//     },
+//     servers: [{ url: "localhost:5000" }],
+//   },
+//   apis: ["routes/*.js"],
+// };
+// let swaggerspe = swaggerJsdoc(options);
 
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerspe));
+// app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerspe));
 //routes
 app.get("/api", (req, res) => {
   res.send("Home");

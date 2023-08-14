@@ -5,25 +5,25 @@ const apiRouter = express.Router();
 const { userModel } = require("../models/user.model");
 
 //register route
-/** 
-http://localhost:5000/api/register
-post:
-      summary: Creates a user.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                username:
-                  type: string
-      responses: 
-        '201':
-          description: Register Successfull"
-          "400":
-          description: Error"
-          */
+// /**
+// http://localhost:5000/api/register
+// post:
+//       summary: Creates a user.
+//       requestBody:
+//         required: true
+//         content:
+//           application/json:
+//             schema:
+//               type: object
+//               properties:
+//                 username:
+//                   type: string
+//       responses:
+//         '201':
+//           description: Register Successfull"
+//           "400":
+//           description: Error"
+//           */
 apiRouter.post("/register", async (req, res) => {
   try {
     const { name, email, password } = req.body;
